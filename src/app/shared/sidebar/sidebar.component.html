@@ -1,0 +1,294 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="../../index3.html" class="brand-link">
+      <img
+        src="./assets/img/AdminLTELogo.png"
+        alt="AdminLTE Logo"
+        class="brand-image img-circle elevation-3"
+        style="opacity: 0.8"
+      />
+      <span class="brand-text font-weight-light">Anmat Trazabilidad</span>
+    </a>
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img
+            src="./assets/img/user2-160x160.jpg"
+            class="img-circle elevation-2"
+            alt="User Image"
+          />
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul
+          class="nav nav-pills nav-sidebar flex-column"
+          data-widget="treeview"
+          role="menu"
+          data-accordion="false"
+        >
+          <li class="nav-header">MENÚ</li>
+          <li
+            [ngClass]="{
+              'nav-item': true,
+              'menu-open': modulo === 'etiquetas' || modulo === ''
+            }"
+          >
+            <a
+              href="#"
+              [ngClass]="{
+                'nav-link': true,
+                active: modulo === 'etiquetas' || modulo === ''
+              }"
+            >
+              <i class="nav-icon fas fa-tags"></i>
+              <p>
+                Etiquetas
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/ingreso']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Ingreso</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/importacion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Importación</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/correccion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Corrección</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/re-impresion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Reimpresión</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/agregacion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Agregación</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/validacion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Validación</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/etiquetas/descarte']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Descarte</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            [ngClass]="{
+              'nav-item': true,
+              'menu-open': modulo === 'movimientos'
+            }"
+          >
+            <a
+              href="#"
+              [ngClass]="{ 'nav-link': true, active: modulo === 'movimientos' }"
+            >
+              <i class="nav-icon fas fa-arrow-right-arrow-left"></i>
+              <p>
+                Movimientos
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/movimientos/envios']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Envíos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/movimientos/recepcion']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Recepción</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/movimientos/otros']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Otros</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/movimientos/manual']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Manual</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/movimientos/consulta']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Consulta</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            [ngClass]="{ 'nav-item': true, 'menu-open': modulo === 'interfaces' }"
+          >
+            <a
+              href="#"
+              [ngClass]="{ 'nav-link': true, active: modulo === 'interfaces' }"
+            >
+              <i class="nav-icon fas fa-window-restore"></i>
+              <p>
+                Interfaces
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/interfaces/envio-remitos']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Envio Remitos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/interfaces/envio-facturas']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Envio Facturas</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            [ngClass]="{
+              'nav-item': true,
+              'menu-open': modulo === 'administracion'
+            }"
+          >
+            <a
+              href="#"
+              [ngClass]="{
+                'nav-link': true,
+                active: modulo === 'administracion'
+              }"
+            >
+              <i class="nav-icon fas fa-sliders"></i>
+              <p>
+                Administracion
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/usuarios']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Usuarios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/base-cuit-gln']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Base CUIT-GLN</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/base-gtin']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Base GTIN</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/impresoras']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Impresoras</p>
+                </a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/bitacora']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Bitácora</p>
+                </a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a
+                  [routerLink]="['/administracion/servicios']"
+                  routerLinkActive="active"
+                  class="nav-link"
+                >
+                  <p>Servicios</p>
+                </a>
+              </li> -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
